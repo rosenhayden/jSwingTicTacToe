@@ -30,27 +30,27 @@ public class TicTacToeGui extends JFrame {
         intializeMenuBar();
     }
     private void intializeMenuBar() {
-        menuBar = new JMenuBar();
-        menu = new JMenu("File");
-        newGame = new JMenuItem("New Game");
+      JMenuBar menuBar = new JMenuBar();
+        JMenu file = new JMenu("File");
+        JMenuItem newGame = new JMenuItem("New Game");
         newGame.addActionListener(new ActionListener() {
-                                      @Override
-                                      public void actionPerformed(ActionEvent e) {
-                                        resetBoard();
-                                      }
-                                  });
-                newGame = new JMenuItem("Quit");
-                quit.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        System.exit(0);
-                    }
-                });
-                menu.add(newGame);
-            menu.add(newGame);
-            menu.add(quit);
-            menuBar.add(menu);
-            setJMenuBar(menuBar);
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetBoard();
+            }
+        });
+        JMenuItem quit = new JMenuItem("Rage Quit (Reset)");
+        quit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        menuBar.add(file);
+        file.add(quit);
+        file.add(newGame);
+        setJMenuBar(menuBar);
+
 
     }
     private void resetBoard() {
