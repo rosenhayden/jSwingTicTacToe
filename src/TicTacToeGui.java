@@ -39,7 +39,7 @@ public class TicTacToeGui extends JFrame {
                 resetBoard();
             }
         });
-        JMenuItem quit = new JMenuItem("Rage Quit (Reset)");
+        JMenuItem quit = new JMenuItem("Rage Quit");
         quit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
